@@ -21,4 +21,40 @@ const student2: Student = {
 };
 
 // Creating an array containing the two students
-const studentsList: Student[] = [student1, student2]
+const studentsList: Student[] = [student1, student2];
+
+const body = document.querySelector('body');
+const table = document.createElement('table');
+const thead = document.createElement('thead');
+const tbody = document.createElement('tbody');
+
+
+thead.innerHTML = `
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Age</th>
+    <th>Location</th>
+  </tr>
+    `;
+
+
+let tableData: string;
+
+studentsList.forEach((student) => {
+  tableData += `
+  <tr>
+    <td>${student.firstName}</td>
+    <td>${student.lastName}</td>
+    <td>${student.age}</td>
+    <td>${student.location}</td>
+  </tr>
+  `
+});
+
+
+tbody.innerHTML = tableData;
+
+table.appendChild(thead);
+table.appendChild(tbody);
+body.appendChild(table);
