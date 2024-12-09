@@ -2,3 +2,4 @@
 **/*-main.js
 **/*-main_
 **/*.test.js
+!**/*0-calcul.test.js
