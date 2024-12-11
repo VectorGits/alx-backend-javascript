@@ -2,4 +2,4 @@
 **/*-main.js
 **/*-main_
 **/*.test.js
-!**/0x06-unittests_in_js/*.test.js
+!**/0x06-unittests_in_js/**/*.test.js
